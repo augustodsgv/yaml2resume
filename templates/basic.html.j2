@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ first_name }} {{ last_name }}'s resume</title>
+    <link rel="stylesheet" href="./styles/basic.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="user-name">{{ first_name }} {{ last_name }}</h1>
+            <p class="user-job-title">{{ job_title }}</p>
+            <p class="user-contact">
+                {{ location }} |
+                {{ email }} |
+                {{ phone }} |
+                <a href="{{ linkedin }}" target="_blank">LinkedIn</a> |
+                <a href="{{ github }}" target="_blank">Github</a>
+            </p>
+        </header>
+
+        {% if educations %}
+        <section class="section">
+            <h2 class=section-name>Education</h2>
+            {% for education in educations %}
+            <div class="experience">
+                <h3 class="experience-title">{{ education.degree_level }} in {{ education.field }} at {{ education.instituition }}</h3>
+                <p class="experience-date">{{ education.start_date }} – {{ education.end_date }}</p>
+            </div>
+            {% endfor %}
+        </section>
+        {% endif %}
+
+        {% if experiences %}
+        <section class="section">
+            <h2 class=section-name>Professional Experience</h2>
+            {% for experience in experiences %}
+            <div class="experience">
+                <h3 class="experience-title">{{ experience.title }}</h3>
+                <p class="experience-date">{{ experience.start_date }} – {{ experience.end_date }}</p>
+                <ul class="bullet-point">
+                    {% for detail in experience.experienceDetails %}
+                    <li>{{ detail }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </section>
+        {% endif %}
+
+        {% if projects %}
+        <section class="section">
+            <h2 class=section-name>Projects</h2>
+            {% for project in projects %}
+            <div class="experience">
+                <h3 class="experience-title">{{ project.title }}</h3>
+                <p class="experience-date">{{ project.start_date }} – {{ project.end_date }}</p>
+                <ul class="bullet-point">
+                    {% for detail in project.projectDetails %}
+                    <li>{{ detail }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </section>
+        {% endif %}
+    </div>
+</body>
+</html>
