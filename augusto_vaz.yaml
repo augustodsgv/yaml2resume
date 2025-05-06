@@ -1,0 +1,55 @@
+first_name: Augusto
+last_name: Vaz
+job_title: Site Reliability Engineer at Magalu Cloud
+location: São Carlos, SP, Brazil
+phone: (16) 99321-8075
+email: augustodsgv@gmail.com
+github: https://github.com/augustodsgv
+linkedin: https://www.linkedin.com/in/augustodsgv/
+
+hard_skills: ['Python', 'Docker', 'Prometheus', 'Grafana', 'Kubernetes', 'ArgoCD', 'Ansible', 'Terraform']
+soft_skills: ['Communication', 'Proactivity', 'Teamwork', 'Problem Solving']
+
+educations:
+  - degree_level: B. Sc.
+    instituition: Universidade Federal de São Carlos (UFSCar)
+    field: Computer Science
+    start_date: Aug 2021
+    end_date: Mar 2025
+
+experiences:
+  - title: Site Reliability Engineer at Magalu Cloud
+    start_date: Aug 2024
+    end_date: Present
+    experienceDetails:
+    - Worked as a SRE in the Infrastructure as a service (IaaS) Team.
+    - Managed infrastructure and application monitoring systems using Prometheus and Grafana.
+    - Automated manual and repetitive tasks using Python scripts and Ansible playbooks.
+    - Deployed and maintained highly available Kubernetes clusters, Postgres databases, RabbitMQ queues and Redis caching.
+    - Operated OpenStack clouds, including server provisioning, network configuration and storage management.
+
+projects:
+  - title: Cloud research with Magalu Cloud and UFSCar
+    start_date: Dec 2023
+    end_date: Oct 2024
+    projectDetails:
+    - Administered a physical cluster infrastructure.
+    - Deployed and maintained OpenStack clouds in bare-metal environments.
+    - Wrote comprehensive documentation for MAAS, Juju and OpenStack.
+    - Conducted training sessions to enhance the team's understanding of the technologies.
+
+  - title: Prometheus Ring
+    start_date: Jan 2025
+    end_date: Present
+    projectDetails:
+    - Researched high availability and scalability systems using distributed architectures.
+    - Published the paper 'Arquitetura de Monitoramento Baseada em Consistent Hashing' in the XXX Workshop de Gerência e Operação de Redes e Serviços.
+    - Engineered a monitoring solution capable of addressing the major cloud provider challenges, such as scalability, reliability, and elasticity.
+
+  - title: Semana da computação da UFSCar (SECOMP)
+    start_date: Apr 2024
+    end_date: Dec 2024
+    projectDetails:
+    - Prospected sponsorship and partnerships for the event.
+    - Coordinated communication with event staff and sponsoring companies for successful collaboration.
+    - Organized and coordinated event logistics.

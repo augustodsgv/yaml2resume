@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Augusto Vaz's resume</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  color: #444;
+}
+
+.container {
+  max-width: none;
+  margin: 0;
+  padding: 40px;
+  background: none;
+  box-shadow: none;
+}
+
+
+/* Header configuration */
+header {
+  text-align: left;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+.user-name {
+  text-align: left;
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.user-job-title {
+  font-size: 1.8em;
+  color: #444;
+  font-weight: normal;
+}
+
+/* Contact configuration*/
+.user-contact {
+  font-size: 1.1em;
+  color: #444;
+  font-weight: normal;
+}
+
+.user-contact a {
+  color: inherit; 
+}
+
+/* Configures underscore on links when hover */
+.user-contact a:hover {
+  text-decoration: underline;
+}
+
+.user-skills {
+  font-size: 1.1em;
+  color: #444;
+  font-weight: normal;
+}
+
+/* Sections configuration */
+.section-name {
+  margin-top: 25px;
+  margin-bottom: 0px;
+
+  padding-bottom: 5px;
+
+  border-bottom: 2px solid #444;
+}
+
+p {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+/* Experience stands for eduacation, job and  projects experiences*/
+.experience {
+  margin-bottom: 20px;
+}
+
+.experience-title {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  /* border-bottom: 2px solid #444; */
+  /* padding-bottom: 5px; */
+}
+
+.experience-date {
+  font-style: italic;
+  color: #444;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+/* Bullet list configuration */
+.bullet-point {
+  font-size: 1.1em;
+  margin: 0;
+  padding-left: 0;
+  list-style-position: inside;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="user-name">Augusto Vaz</h1>
+            <p class="user-job-title">Site Reliability Engineer at Magalu Cloud</p>
+            <p class="user-contact">
+                <b>Personal information:</b>
+                São Carlos, SP, Brazil |
+                augustodsgv@gmail.com |
+                (16) 99321-8075 |
+                <a href="https://www.linkedin.com/in/augustodsgv/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/augustodsgv" target="_blank">Github</a>
+            </p>
+            
+            <p class="user-skills">
+                <b>Hard Skills:</b>
+                
+                    Python |
+                
+                    Docker |
+                
+                    Prometheus |
+                
+                    Grafana |
+                
+                    Kubernetes |
+                
+                    ArgoCD |
+                
+                    Ansible |
+                
+                    Terraform
+                
+            </p>
+            
+
+            
+            <p class="user-skills">
+                <b>Soft Skills:</b>
+                
+                    Communication |
+                
+                    Proactivity |
+                
+                    Teamwork |
+                
+                    Problem Solving
+                
+            </p>
+            
+
+        </header>
+
+        
+        <section class="section">
+            <h2 class=section-name>Education</h2>
+            
+            <div class="experience">
+                <h3 class="experience-title">B. Sc. in Computer Science at Universidade Federal de São Carlos (UFSCar)</h3>
+                <p class="experience-date">Aug 2021 – Mar 2025</p>
+            </div>
+            
+        </section>
+        
+
+        
+        <section class="section">
+            <h2 class=section-name>Professional Experience</h2>
+            
+            <div class="experience">
+                <h3 class="experience-title">Site Reliability Engineer at Magalu Cloud</h3>
+                <p class="experience-date">Aug 2024 – Present</p>
+                <ul class="bullet-point">
+                    
+                    <li>Worked as a SRE in the Infrastructure as a service (IaaS) Team.</li>
+                    
+                    <li>Managed infrastructure and application monitoring systems using Prometheus and Grafana.</li>
+                    
+                    <li>Automated manual and repetitive tasks using Python scripts and Ansible playbooks.</li>
+                    
+                    <li>Deployed and maintained highly available Kubernetes clusters, Postgres databases, RabbitMQ queues and Redis caching.</li>
+                    
+                    <li>Operated OpenStack clouds, including server provisioning, network configuration and storage management.</li>
+                    
+                </ul>
+            </div>
+            
+        </section>
+        
+
+        
+        <section class="section">
+            <h2 class=section-name>Projects</h2>
+            
+            <div class="experience">
+                <h3 class="experience-title">Cloud research with Magalu Cloud and UFSCar</h3>
+                <p class="experience-date">Dec 2023 – Oct 2024</p>
+                <ul class="bullet-point">
+                    
+                    <li>Administered a physical cluster infrastructure.</li>
+                    
+                    <li>Deployed and maintained OpenStack clouds in bare-metal environments.</li>
+                    
+                    <li>Wrote comprehensive documentation for MAAS, Juju and OpenStack.</li>
+                    
+                    <li>Conducted training sessions to enhance the team's understanding of the technologies.</li>
+                    
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <h3 class="experience-title">Prometheus Ring</h3>
+                <p class="experience-date">Jan 2025 – Present</p>
+                <ul class="bullet-point">
+                    
+                    <li>Researched high availability and scalability systems using distributed architectures.</li>
+                    
+                    <li>Published the paper 'Arquitetura de Monitoramento Baseada em Consistent Hashing' in the XXX Workshop de Gerência e Operação de Redes e Serviços.</li>
+                    
+                    <li>Engineered a monitoring solution capable of addressing the major cloud provider challenges, such as scalability, reliability, and elasticity.</li>
+                    
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <h3 class="experience-title">Semana da computação da UFSCar (SECOMP)</h3>
+                <p class="experience-date">Apr 2024 – Dec 2024</p>
+                <ul class="bullet-point">
+                    
+                    <li>Prospected sponsorship and partnerships for the event.</li>
+                    
+                    <li>Coordinated communication with event staff and sponsoring companies for successful collaboration.</li>
+                    
+                    <li>Organized and coordinated event logistics.</li>
+                    
+                </ul>
+            </div>
+            
+        </section>
+        
+    </div>
+</body>
+</html>
