@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ first_name }} {{ last_name }}'s resume</title>
-    <link rel="stylesheet" href="./styles/basic.css" />
+    <style>
+        {{ style }}
+    </style>
 </head>
 <body>
     <div class="container">
@@ -12,12 +14,31 @@
             <h1 class="user-name">{{ first_name }} {{ last_name }}</h1>
             <p class="user-job-title">{{ job_title }}</p>
             <p class="user-contact">
+                <b>Personal information:</b>
                 {{ location }} |
                 {{ email }} |
                 {{ phone }} |
                 <a href="{{ linkedin }}" target="_blank">LinkedIn</a> |
                 <a href="{{ github }}" target="_blank">Github</a>
             </p>
+            {% if hard_skills %}
+            <p class="user-skills">
+                <b>Hard Skills:</b>
+                {% for skill in hard_skills %}
+                    {{ skill }}{% if not loop.last %} |{% endif %}
+                {% endfor %}
+            </p>
+            {% endif %}
+
+            {% if soft_skills %}
+            <p class="user-skills">
+                <b>Soft Skills:</b>
+                {% for skill in soft_skills %}
+                    {{ skill }}{% if not loop.last %} |{% endif %}
+                {% endfor %}
+            </p>
+            {% endif %}
+
         </header>
 
         {% if educations %}
