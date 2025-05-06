@@ -8,7 +8,7 @@ from dataclasses import dataclass
 import argparse
 import yaml
 import jinja2
-import weasyprint
+import pdfkit
 
 
 @dataclass
@@ -28,6 +28,8 @@ class ResumeData:
     experiences: List[Dict]
     educations: List[Dict]
     projects: List[Dict]
+    hard_skills: List[str]
+    soft_skills: List[str]
 
 
 class Yaml2Resume:
@@ -50,6 +52,10 @@ class Yaml2Resume:
         """
         Uses the jinja template to create the html resume and returns the generated string.
         """
+        # Embbeds the css style inside the html
+        with open(self.style_file, encoding='utf-8') as sf:
+            style = sf.read()
+
         env = jinja2.Environment(loader=jinja2.FileSystemLoader("."))
         template = env.get_template(self.template_file)
         return template.render(
@@ -64,6 +70,9 @@ class Yaml2Resume:
             experiences=self.data.experiences,
             educations=self.data.educations,
             projects=self.data.projects,
+            hard_skills=self.data.hard_skills,
+            soft_skills=self.data.soft_skills,
+            style=style
         )
 
     def gen_html(self, output_file: str) -> None:
@@ -78,16 +87,23 @@ class Yaml2Resume:
         """
         Generates a pdf resume.
         """
-        css = weasyprint.CSS(self.style_file)
-        weasyprint.HTML(string=self._html, base_url=".").write_pdf(
-            output_file, stylesheet=css
+        pdfkit.from_string(
+            self._html,
+            output_file,
+            options={
+                'margin-top': '0in',
+                'margin-right': '0in',
+                'margin-bottom': '0in',
+                'margin-left': '0in',
+                'page-size': 'A4'  # Optional: control page size
+            }
         )
 
         # pdfkit.from_string(, output_file)
         print("PDF resume generated!")
 
     @classmethod
-    def from_yaml(cls, file_name: str, template_file: str, style_file: str) -> "Resume":
+    def from_yaml(cls, file_name: str, template_file: str, style_file: str) -> "Yaml2Resume":
         """
         Creates a Resume object from a YAML file
         """
@@ -106,6 +122,8 @@ class Yaml2Resume:
             experiences=yaml_dict["experiences"],
             educations=yaml_dict["educations"],
             projects=yaml_dict["projects"],
+            hard_skills=yaml_dict["hard_skills"],
+            soft_skills=yaml_dict["soft_skills"],
         )
         return Yaml2Resume(
             resume_data,
